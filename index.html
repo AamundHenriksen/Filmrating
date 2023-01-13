@@ -6,14 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie rating</title>
     <link rel="stylesheet" href="index.css">
+    <script src="JS/model.js"></script>
+    <script src="JS/common.js"></script>
+    <script src="JS/homepageView.js"></script>
+    <script src="JS/homepageController.js"></script>
+    <script src="JS/scienceFictionView.js"></script>
+    <script src="JS/scienceFictionController.js"></script>
+    <script src="JS/actionView.js"></script>
+    <script src="JS/actionController.js"></script>
 </head>
 <body>
     <div id="app"></div>
 
-    <script src="JS/model.js"></script>
-    <script src="JS/View/main.js"></script>
-    <script src="JS/View/sci-fi.js"></script>
-    <script src="JS/View/action.js"></script>
-    <script src="JS/controller.js"></script>
+    <script>
+        updateView()
+        function updateView() {
+            model.currentPage === "homepage" ? homepageView()
+
+            : model.currentPage === "scienceFiction" ? scienceFictionView()
+
+            : model.currentPage === "action" ? actionView()
+
+            : console.log("ERROR: Page doesn't exist")
+        }
+    </script>
 </body>
 </html>

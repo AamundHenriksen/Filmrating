@@ -1,18 +1,18 @@
+"use strict"
+
 const model = {
-    app: document.getElementById("app"),
+    // App
+    currentPage: "homepage",
 
-    currentPage: "main"
-}
+    // Inputs
 
-const movies = {
-    seen: []
-}
-
-const genre = {
-    sci_fi: [
+    // Data
+    movies: [
         {
-            id: 0,
-            movie: "Star Wars",
+            id: 1,
+            movie: "Star Wars: Episode IV - A New Hope",
+            genre: "Science Fiction",
+            rating: 9.2,
             poster: "images/a-new-hope.jpg",
             plot: `
                 Princess Leia gets abducted by the insidious Darth Vader.
@@ -22,8 +22,10 @@ const genre = {
         },
 
         {
-            id: 1,
+            id: 2,
             movie: "Venom",
+            genre: "Science Fiction",
+            rating: 9,
             poster: "images/venom.jpg",
             plot: `
                 While trying to take down Carlton, the CEO of Life Foundation, Eddie,
@@ -33,8 +35,10 @@ const genre = {
         },
 
         {
-            id: 2,
+            id: 3,
             movie: "Avatar: The Way of Water",
+            genre: "Science Fiction",
+            rating: 8.8,
             poster: "images/avatar.jpg",
             plot: `
                 Jake Sully and Ney'tiri have formed a family and are
@@ -42,6 +46,6 @@ const genre = {
                 home and explore the regions of Pandora. When an ancient threat
                 resurfaces, Jake must fight a difficult war against the humans.
                 `
-        }
-    ],
+        },
+    ]
 }
