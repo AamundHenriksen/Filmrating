@@ -12,15 +12,15 @@ function scienceFictionView() {
 }
 
 function scienceFictionMovies() {
-    const movie = model.movies.filter(function(obj) { return obj.genre === "Science Fiction" })
+    const scifiMovies = model.movies.filter(function(obj) { return obj.genre === "Science Fiction" })
 
     let html = ""
-    for (let i = 0; i < movie.length; i++) {
+    for (let i = 0; i < scifiMovies.length; i++) {
         html += `
         <li>
-            <img src="${movie[i].poster}" onclick="readPlot(${i})">
-            <span>${movie[i].rating}</span>
-            <div class="plot" style="display:none">${movie[i].plot}</div>
+            <img src="${scifiMovies[i].poster}" onclick="readPlot(${i})">
+            <span>${scifiMovies[i].rating}</span>
+            <div class="plot" style="display:none">${scifiMovies[i].plot}</div>
         </li>
         `
     }
