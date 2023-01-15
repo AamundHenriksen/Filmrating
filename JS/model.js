@@ -6,11 +6,6 @@ const model = {
     selectedMovie: "",
 
     // Inputs
-    inputs: {
-        scifi: {
-            starWars: "Favorite"
-        }
-    },
 
     // Data
     movies: [
