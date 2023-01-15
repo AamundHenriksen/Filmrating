@@ -1,5 +1,11 @@
-img {
+.poster {
     width: 200px;
     height: 280px;
+    object-fit: cover;
+}
+
+.background-img {
+    width: 1000px;
+    height: 500px;
     object-fit: cover;
 }

@@ -5,6 +5,8 @@ function scienceFictionView() {
     <h1>Science Fiction</h1>
     <hr>
 
+    <div>${currentMovie()}</div>
+    
     <ul>
         ${scienceFictionMovies()}
     </ul>
@@ -18,9 +20,8 @@ function scienceFictionMovies() {
     for (let i = 0; i < scifiMovies.length; i++) {
         html += `
         <li>
-            <img src="${scifiMovies[i].poster}" onclick="readPlot(${i})">
-            <span>${scifiMovies[i].rating}</span>
-            <div class="plot" style="display:none">${scifiMovies[i].plot}</div>
+            <img class="poster" src="${scifiMovies[i].poster}" onclick="selectedMovie(${scifiMovies[i].id})">
+            <span>Rating: ${scifiMovies[i].rating}/10</span>
         </li>
         `
     }
@@ -28,12 +29,23 @@ function scienceFictionMovies() {
     return html
 }
 
-function readPlot(index) {
-    const plot = document.getElementsByClassName("plot")[index]
+function currentMovie() {
+    if (model.selectedMovie === "") { return "" }
 
-    if (plot.style.display === "block") {
-        return plot.style.display = "none"
+    return `
+    <img class="background-img" src="${model.selectedMovie.backgroundImg}">
+    <h1>${model.selectedMovie.title}</h1>
+    <p>${model.selectedMovie.plot}</p>
+    <span>Rating: ${model.selectedMovie.rating}/10</span>
+    <button onclick="addToSeenMovies(${model.selectedMovie.id})">Seen</button>
+    <button onclick="addToFavoriteMovies(${model.selectedMovie.id})">${buttonStatus(model.selectedMovie.isFavorite)}</button>
+    `
+}
+
+function buttonStatus(isFavorite) {
+    if (isFavorite) {
+        return "Unfavorite"
     }
 
-    plot.style.display = "block"
+    return "Favorite"
 }
