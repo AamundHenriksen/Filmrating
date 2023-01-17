@@ -11,9 +11,10 @@ const model = {
     movies: [
         {
             id: 1,
-            isFavorite: false,
+            isFavorite: true,
+            isSeen: false,
             title: "Star Wars: Episode IV - A New Hope",
-            genre: "Science Fiction",
+            genre: "scifi",
             rating: 9.2,
             poster: "images/a-new-hope.jpg",
             backgroundImg: "images/a-new-hope-background.jpg",
@@ -27,8 +28,9 @@ const model = {
         {
             id: 2,
             isFavorite: false,
+            isSeen: true,
             title: "Venom",
-            genre: "Science Fiction",
+            genre: "scifi",
             rating: 9,
             poster: "images/venom.jpg",
             backgroundImg: "images/venom-background.jpg",
@@ -42,8 +44,9 @@ const model = {
         {
             id: 3,
             isFavorite: false,
+            isSeen: false,
             title: "Avatar: The Way of Water",
-            genre: "Science Fiction",
+            genre: "scifi",
             rating: 8.8,
             poster: "images/avatar.jpg",
             backgroundImg: "images/avatar-background.jpg",
@@ -55,8 +58,4 @@ const model = {
                 `
         },
     ],
-
-    seenMovies: [],
-
-    favoriteMovies: []
 }

@@ -1,22 +1,24 @@
 "use strict"
 
-function scienceFictionView() {
+function scifiView() {
     app.innerHTML = `
-    <h1>Science Fiction</h1>
+    <span onclick="changeCurrentPageTo('homepage')">Homepage</span>
+
+    <h1>Scifi</h1>
     <hr>
 
-    <div>${currentMovie()}</div>
+    <div>${selectedScifiMovie()}</div>
     
     <ul>
-        ${scienceFictionMovies()}
+        ${allScifiMovies()}
     </ul>
     `
 }
 
-function scienceFictionMovies() {
-    const scifiMovies = model.movies.filter(function(obj) { return obj.genre === "Science Fiction" })
-
+function allScifiMovies() {
+    const scifiMovies = model.movies.filter(function(obj) { return obj.genre === "scifi" && obj.isSeen === false })
     let html = ""
+
     for (let i = 0; i < scifiMovies.length; i++) {
         html += `
         <li>
@@ -29,7 +31,7 @@ function scienceFictionMovies() {
     return html
 }
 
-function currentMovie() {
+function selectedScifiMovie() {
     if (model.selectedMovie === "") { return "" }
 
     return `
@@ -37,15 +39,7 @@ function currentMovie() {
     <h1>${model.selectedMovie.title}</h1>
     <p>${model.selectedMovie.plot}</p>
     <span>Rating: ${model.selectedMovie.rating}/10</span>
-    <button onclick="addToSeenMovies(${model.selectedMovie.id})">Seen</button>
-    <button onclick="addToFavoriteMovies(${model.selectedMovie.id})">${buttonStatus(model.selectedMovie.isFavorite)}</button>
+    <button onclick="addToSeenMovies(${model.selectedMovie.id})">${seenBtnStatus(model.selectedMovie.isSeen)}</button>
+    <button onclick="addToFavoriteMovies(${model.selectedMovie.id})">${favoriteBtnStatus(model.selectedMovie.isFavorite)}</button>
     `
-}
-
-function buttonStatus(isFavorite) {
-    if (isFavorite) {
-        return "Unfavorite"
-    }
-
-    return "Favorite"
 }

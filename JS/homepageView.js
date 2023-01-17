@@ -2,8 +2,10 @@
 
 function homepageView() {
     app.innerHTML = `
-    <button onclick="changeCurrentPageTo('scienceFiction')">Science Fiction</button>
-    <button>Action</button>
+    <button onclick="changeCurrentPageTo('scifi')">Scifi</button>
     <hr>
+
+    <button onclick="changeCurrentPageTo('favorites')">Favorites</button>
+    <button onclick="changeCurrentPageTo('seen')">Seen</button>
     `
 }
