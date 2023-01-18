@@ -36,6 +36,16 @@ function addToSeenMovies(id) {
         model.selectedMovie = ""
         updateView()
 
+    } else if (model.currentPage === "action") {
+        model.movies[movieIdIndex].isSeen = true
+        model.selectedMovie = ""
+        updateView()
+        
+    } else if (model.currentPage === "fantasy") {
+        model.movies[movieIdIndex].isSeen = true
+        model.selectedMovie = ""
+        updateView()
+        
     } else if (model.currentPage === "favorites") {
         if (model.movies[movieIdIndex].isSeen) {
             model.movies[movieIdIndex].isSeen = false
@@ -64,7 +74,25 @@ function addToFavoriteMovies(id) {
         model.movies[movieIdIndex].isFavorite = true
         updateView()
 
-    }  else if (model.currentPage === "favorites") {
+    } else if (model.currentPage === "action") {
+        if (model.movies[movieIdIndex].isFavorite) {
+            model.movies[movieIdIndex].isFavorite = false
+            return updateView()
+        }
+
+        model.movies[movieIdIndex].isFavorite = true
+        updateView()
+
+    } else if (model.currentPage === "fantasy") {
+        if (model.movies[movieIdIndex].isFavorite) {
+            model.movies[movieIdIndex].isFavorite = false
+            return updateView()
+        }
+
+        model.movies[movieIdIndex].isFavorite = true
+        updateView()
+        
+    } else if (model.currentPage === "favorites") {
         model.movies[movieIdIndex].isFavorite = false
         model.selectedMovie = ""
         updateView()

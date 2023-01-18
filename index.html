@@ -9,13 +9,11 @@
     <script src="JS/model.js"></script>
     <script src="JS/common.js"></script>
     <script src="JS/homepageView.js"></script>
-    <script src="JS/homepageController.js"></script>
     <script src="JS/scifiView.js"></script>
-    <script src="JS/scifiController.js"></script>
+    <script src="JS/actionView.js"></script>
+    <script src="JS/fantasyView.js"></script>
     <script src="JS/favoritesView.js"></script>
-    <script src="JS/favoritesController.js"></script>
     <script src="JS/seenView.js"></script>
-    <script src="JS/seenController.js"></script>
 </head>
 <body>
     <div id="app"></div>
@@ -26,6 +24,10 @@
             model.currentPage === "homepage" ? homepageView()
 
             : model.currentPage === "scifi" ? scifiView()
+
+            : model.currentPage === "action" ? actionView()
+
+            : model.currentPage === "fantasy" ? fantasyView()
 
             : model.currentPage === "favorites" ? favoritesView()
 
