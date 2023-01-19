@@ -2,10 +2,8 @@
 
 const model = {
     // App
-    currentPage: "homepage",
+    currentPage: "Homepage",
     selectedMovie: "",
-
-    // Inputs
 
     // Data
     movies: [
@@ -14,7 +12,7 @@ const model = {
             isFavorite: false,
             isSeen: false,
             title: "Star Wars: Episode IV - A New Hope",
-            genre: "scifi",
+            genre: "Sci-Fi",
             rating: 9.2,
             poster: "images/a-new-hope.jpg",
             backgroundImg: "images/a-new-hope-background.jpg",
@@ -30,7 +28,7 @@ const model = {
             isFavorite: false,
             isSeen: false,
             title: "Venom",
-            genre: "scifi",
+            genre: "Sci-Fi",
             rating: 9,
             poster: "images/venom.jpg",
             backgroundImg: "images/venom-background.jpg",
@@ -46,7 +44,7 @@ const model = {
             isFavorite: false,
             isSeen: false,
             title: "Avatar: The Way of Water",
-            genre: "scifi",
+            genre: "Sci-Fi",
             rating: 8.8,
             poster: "images/avatar.jpg",
             backgroundImg: "images/avatar-background.jpg",
@@ -63,7 +61,7 @@ const model = {
             isFavorite: false,
             isSeen: false,
             title: "Uncharted",
-            genre: "action",
+            genre: "Action",
             rating: 6.3,
             poster: "images/uncharted.jpg",
             backgroundImg: "images/uncharted-background.jpg",
@@ -79,7 +77,7 @@ const model = {
             isFavorite: false,
             isSeen: false,
             title: "The Wolverine",
-            genre: "action",
+            genre: "Action",
             rating: 6.7,
             poster: "images/wolverine.jpg",
             backgroundImg: "images/wolverine-background.jpg",
@@ -95,7 +93,7 @@ const model = {
             isFavorite: false,
             isSeen: false,
             title: "John Wick",
-            genre: "action",
+            genre: "Action",
             rating: 7.4,
             poster: "images/john-wick.jpg",
             backgroundImg: "images/john-wick-background.jpg",
@@ -111,7 +109,7 @@ const model = {
             isFavorite: false,
             isSeen: false,
             title: "Ghost Rider",
-            genre: "fantasy",
+            genre: "Fantasy",
             rating: 5.2,
             poster: "images/ghost-rider.jpg",
             backgroundImg: "images/ghost-rider-background.jpg",
@@ -126,7 +124,7 @@ const model = {
             isFavorite: false,
             isSeen: false,
             title: "Harry Potter and the Prisoner of Azkaban",
-            genre: "fantasy",
+            genre: "Fantasy",
             rating: 7.9,
             poster: "images/harry-potter-3.jpg",
             backgroundImg: "images/harry-potter-3-background.jpg",
@@ -142,7 +140,7 @@ const model = {
             isFavorite: false,
             isSeen: false,
             title: "Troll",
-            genre: "fantasy",
+            genre: "Fantasy",
             rating: 5.8,
             poster: "images/troll.jpg",
             backgroundImg: "images/troll-background.jpg",

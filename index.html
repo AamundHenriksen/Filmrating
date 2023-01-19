@@ -21,17 +21,17 @@
     <script>
         updateView()
         function updateView() {
-            model.currentPage === "homepage" ? homepageView()
+            model.currentPage === "Homepage" ? homepageView()
 
-            : model.currentPage === "scifi" ? scifiView()
+            : model.currentPage === "Sci-Fi" ? scifiView()
 
-            : model.currentPage === "action" ? actionView()
+            : model.currentPage === "Action" ? actionView()
 
-            : model.currentPage === "fantasy" ? fantasyView()
+            : model.currentPage === "Fantasy" ? fantasyView()
 
-            : model.currentPage === "favorites" ? favoritesView()
+            : model.currentPage === "Favorites" ? favoritesView()
 
-            : model.currentPage === "seen" ? seenView()
+            : model.currentPage === "Seen" ? seenView()
 
             : console.log("ERROR: Page doesn't exist")
         }

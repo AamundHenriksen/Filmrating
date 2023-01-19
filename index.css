@@ -9,3 +9,7 @@
     height: 500px;
     object-fit: cover;
 }
+
+.movies-layout {
+    display: flex;
+}

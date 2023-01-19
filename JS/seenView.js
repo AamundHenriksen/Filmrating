@@ -2,11 +2,11 @@
 
 function seenView() {
     app.innerHTML = `
-    <span onclick="changeCurrentPageTo('homepage')">Homepage</span>
+    <span onclick="changeCurrentPageTo('Homepage')">Homepage</span>
     <h1>Seen</h1>
     <hr>
 
-    <div>${selectedSeenMovie()}</div>
+    <div>${selectedMovie()}</div>
 
     <ul>
         ${allSeenMovies()}
@@ -21,24 +21,11 @@ function allSeenMovies() {
     for (let i = 0; i < seenMovies.length; i++) {
         html += `
         <li>
-            <img class="poster" src="${seenMovies[i].poster}" onclick="selectedMovie(${seenMovies[i].id})">
+            <img class="poster" src="${seenMovies[i].poster}" onclick="selectMovie(${seenMovies[i].id})">
             <span>Rating: ${seenMovies[i].rating}/10</span>
         </li>
         `
     }
 
     return html
-}
-
-function selectedSeenMovie() {
-    if (model.selectedMovie === "") { return "" }
-
-    return `
-    <img class="background-img" src="${model.selectedMovie.backgroundImg}">
-    <h1>${model.selectedMovie.title}</h1>
-    <p>${model.selectedMovie.plot}</p>
-    <span>Rating: ${model.selectedMovie.rating}/10</span>
-    <button onclick="addToSeenMovies(${model.selectedMovie.id})">${seenBtnStatus(model.selectedMovie.isSeen)}</button>
-    <button onclick="addToFavoriteMovies(${model.selectedMovie.id})">${favoriteBtnStatus(model.selectedMovie.isFavorite)}</button>
-    `
 }
